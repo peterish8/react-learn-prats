@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vinext dev --host 127.0.0.1",
-    "build": "tsc -b && vinext build && mkdir -p dist/.openai && cp .openai/hosting.json dist/.openai/hosting.json",
+    "build": "tsc -b && vite build --config vite.static.config.ts --outDir static-dist && node scripts/build-sites.mjs",
     "lint": "eslint .",
     "test": "vitest run",
     "dev:vinext": "vinext dev --port 3001",
     "build:vinext": "vinext build",
+    "build:static": "vite build --config vite.static.config.ts --outDir static-dist",
     "start:vinext": "vinext start"
   },
   "dependencies": {
