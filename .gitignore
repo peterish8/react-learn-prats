@@ -1,4 +1,10 @@
 node_modules/
 dist/
+static-dist/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
 .DS_Store
 *.log
